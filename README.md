@@ -4,6 +4,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/sushink70/conjure/blob/main/CONTRIBUTING.md)
 
+![Alt text for the image](conjure.png)
+
+
 **Conjure** is a production-ready CLI tool for visualizing Python code execution step-by-step. Designed for Data Structures and Algorithms (DSA) mastery, it provides interactive traces, visual hints for common patterns (e.g., recursion, DP tables, graph traversals), and complexity analysis. Perfect for debugging, learning, or teaching—watch your code come alive!
 
 Key highlights:
