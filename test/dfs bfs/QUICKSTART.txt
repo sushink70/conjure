@@ -1,0 +1,83 @@
+╔═══════════════════════════════════════════════════════════════╗
+║         BFS/DFS GRAPH VISUALIZER - QUICK START               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 1: SETUP                                               │
+└─────────────────────────────────────────────────────────────┘
+
+pip install rich
+
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 2: RUN EXAMPLES                                        │
+└─────────────────────────────────────────────────────────────┘
+
+# Example 1: Simple graph with BFS
+python3 visualizer.py example_graph.py
+
+# Example 2: Tree with DFS
+python3 visualizer.py example_tree.py -a dfs
+
+# Example 3: Complex graph
+python3 visualizer.py example_complex_graph.py -d 0.8
+
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 3: CREATE YOUR OWN (my_graph.py)                      │
+└─────────────────────────────────────────────────────────────┘
+
+graph = {
+    0: [1, 2],
+    1: [3],
+    2: [3],
+    3: []
+}
+start = 0
+
+┌─────────────────────────────────────────────────────────────┐
+│ STEP 4: VISUALIZE YOUR GRAPH                                │
+└─────────────────────────────────────────────────────────────┘
+
+python3 visualizer.py my_graph.py -a bfs -s 0 -d 0.5
+
+┌─────────────────────────────────────────────────────────────┐
+│ OPTIONS                                                      │
+└─────────────────────────────────────────────────────────────┘
+
+-a {bfs|dfs}      Algorithm (default: bfs)
+-s NODE           Starting node (default: auto)
+-d SECONDS        Delay per step (default: 0.5)
+-t {graph|tree}   Force type (default: auto)
+
+┌─────────────────────────────────────────────────────────────┐
+│ FILES INCLUDED                                               │
+└─────────────────────────────────────────────────────────────┘
+
+visualizer.py              → Main tool
+example_graph.py           → Simple graph
+example_tree.py            → Simple tree
+example_complex_graph.py   → Named nodes graph
+test_cases.py              → 10 test cases
+README.md                  → Full documentation
+USAGE.md                   → Detailed guide
+
+┌─────────────────────────────────────────────────────────────┐
+│ TIPS                                                         │
+└─────────────────────────────────────────────────────────────┘
+
+• Use -d 2.0 for slow, detailed view
+• Use -d 0.1 for quick overview
+• Press Ctrl+C to exit anytime
+• Check test_cases.py for more examples
+
+┌─────────────────────────────────────────────────────────────┐
+│ TROUBLESHOOTING                                              │
+└─────────────────────────────────────────────────────────────┘
+
+"Could not find graph" → Use variable name: graph/tree
+"Wrong node"           → Use -s to specify start node
+"Too fast/slow"        → Adjust with -d SECONDS
+"Import error"         → Run: pip install rich
+
+╔═══════════════════════════════════════════════════════════════╗
+║                  READY TO VISUALIZE! 🚀                       ║
+╚═══════════════════════════════════════════════════════════════╝
