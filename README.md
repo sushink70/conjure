@@ -5,11 +5,12 @@
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/sushink70/conjure/blob/main/CONTRIBUTING.md)
 
 ![Alt text for the image](conjure.png)
-
+![Alt text for the image](visualizer_v2.png)
 
 **Conjure** is a production-ready CLI tool for visualizing Python code execution step-by-step. Designed for Data Structures and Algorithms (DSA) mastery, it provides interactive traces, visual hints for common patterns (e.g., recursion, DP tables, graph traversals), and complexity analysis. Perfect for debugging, learning, or teaching—watch your code come alive!
 
 Key highlights:
+
 - **Step-by-step execution** with call stack, variables, and output.
 - **DSA-focused hints**: Detects swaps, visited sets, recursion depth, and more.
 - **Security-first**: Redacts sensitive data, caps recursion/loops to prevent hangs.
@@ -35,17 +36,20 @@ Key highlights:
 1. **Prerequisites**: Python 3.8+.
 
 2. **Install Dependencies**:
+
    ```bash
    pip install rich
    ```
 
 3. **Clone the Repo**:
+
    ```bash
    git clone https://github.com/sushink70/conjure.git
    cd conjure
    ```
 
 4. **Run Directly** (no install needed):
+
    ```bash
    python conjure.py your_script.py
    ```
@@ -76,6 +80,7 @@ If no file is provided, it runs a built-in Bubble Sort example.
 ### Interactive Controls
 
 In interactive mode:
+
 - `n`: Next step
 - `p`: Previous step
 - `j`: Jump to step (prompts for number)
@@ -86,22 +91,29 @@ In interactive mode:
 ## Examples
 
 ### 1. Basic Interactive Run
+
 ```bash
 python conjure.py examples/bubble_sort.py
 ```
+
 - Traces the sort, highlights swaps with hints, shows variable bars.
 
 ### 2. Auto-Play with Export
+
 ```bash
 python conjure.py examples/fibonacci.py --auto --delay 0.3 --export fib_trace.json
 ```
+
 - Plays recursion visualization; exports steps for analysis.
 
 ### 3. Summary-Only for Complexity Check
+
 ```bash
 python conjure.py examples/graph_dfs.py --summary-only
 ```
+
 Output:
+
 ```
 📊 Execution Summary
 ┌─────────────────────────┬──────────┐
@@ -128,6 +140,7 @@ Hints detected: 🔗 Graph structure – O(V+E) traversal expected, 🔍 Visited
 ```
 
 ### 4. Stdin Mode for Quick Tests
+
 ```bash
 echo "
 def factorial(n):
@@ -138,11 +151,13 @@ def factorial(n):
 print(factorial(5))
 " | python conjure.py --stdin --auto
 ```
+
 - Visualizes recursion with depth warnings if unchecked.
 
 ## Built-in Examples
 
 Check the `examples/` folder:
+
 - `bubble_sort.py`: O(n²) quadratic sort with swap visuals.
 - `fibonacci.py`: Recursive vs. memoized versions.
 - `graph_dfs.py`: Graph traversal with visited hints.
@@ -162,6 +177,7 @@ If execution hangs, increase `--max-steps` or check for loops/recursion.
 This project is 100% open source—fork, improve, and share freely! We welcome all contributions, from bug fixes to new DSA detectors (e.g., tree traversals).
 
 ### How to Contribute
+
 1. Fork the repo & clone locally.
 2. Create a feature branch (`git checkout -b feat/amazing-new-hint`).
 3. Make your changes & add tests (use `pytest` if adding).
@@ -169,12 +185,15 @@ This project is 100% open source—fork, improve, and share freely! We welcome a
 5. Push & open a PR!
 
 **Guidelines**:
+
 - Follow PEP 8 style.
 - Update version in docstring for releases.
 - Add examples for new features.
 - See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 **Roadmap Ideas**:
+
+- More DSA patterns (e.g., segment trees, tries).
 - Web UI export (HTML traces).
 - More DSA patterns (e.g., union-find, sliding windows).
 - Integration with Jupyter/IPython.
@@ -188,4 +207,4 @@ MIT License—free to use, modify, and distribute. See [LICENSE](LICENSE) for de
 
 ---
 
-**Built with ❤️ by the Conjure Community** | [Issues](https://github.com/sushink70/conjure/issues) | [Stars Welcome!](https://github.com/sushink70/conjure)
+**Built with ❤️ by the IamDreamer Community** | [Issues](https://github.com/sushink70/conjure/issues) | [Stars Welcome!](https://github.com/sushink70/conjure)
